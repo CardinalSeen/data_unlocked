@@ -41,30 +41,26 @@ Project_Radiant/
 ├── reporting/
 ├── sample_output/
 ├── data_quality/
-└── performance/ `````
+└── performance/
 
-## Tools and Technologies
+` ``` `
+Tools and Technologies
 PostgreSQL
 SQL
 Git
 GitHub
-
-## Data Engineering Skills Demonstrated
-
+Data Engineering Skills Demonstrated
 Data transformation
 SQL scripting
 Reporting logic development
 Data quality validation
 Repository and file structure organization
 Documentation for reproducible analytics workflows
-
-## Why This Project Matters
+Why This Project Matters
 This project was created to demonstrate how data engineering work supports reliable reporting and better decision-making. Rather than focusing only on query writing, Project Radiant emphasizes the broader workflow of preparing trustworthy datasets that can be used by analysts, operations teams, or business stakeholders.
 It also reflects an important real-world principle in data engineering: good reporting depends not only on calculations, but also on data quality, structure, consistency, and maintainability.
-
-## Disclaimer
+Disclaimer
 This project uses randomly generated synthetic data created for educational and portfolio purposes only. No real scorecard, employee, or company-confidential data is disclosed in this project.
-
 Author
 Marc Sandrino
 Portfolio Project under data_unlocked
