@@ -41,7 +41,7 @@ Project_Radiant/
 ├── reporting/
 ├── sample_output/
 ├── data_quality/
-└── performance/
+└── performance/ `````
 
 ## Tools and Technologies
 PostgreSQL
