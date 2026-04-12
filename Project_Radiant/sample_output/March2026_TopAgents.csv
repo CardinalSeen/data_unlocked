@@ -1,0 +1,5 @@
+"employee_name","team_lead","masked_emp_id","total_transactions","avg_quality_score","quality_audit_count","adherence_count","compliance_violations","counted_absences","productivity_weighted","quality_weighted","adherence_weighted","compliance_weighted","attendance_weighted","final_score","overall_rank","bonus_status"
+"Flash Timberlake","Agapito Strikeland","670*****","1274","82.20","5","3","0","1","25.50","16.44","17.00",20,"9.50","88.44","1","Eligible"
+"Mickey Mouse","Armando Lagablab","670*****","1215","78.80","5","2","0","1","24.00","15.76","18.00",20,"9.50","87.26","2","Eligible"
+"Joker Styles","Agapito Strikeland","670*****","1160","85.20","5","3","0","1","22.50","17.04","17.00",20,"9.50","86.04","3","Eligible"
+"Po Sinatra","Agapito Strikeland","670*****","1264","82.60","5","6","0","1","25.50","16.52","14.00",20,"9.50","85.52","4","Eligible"
