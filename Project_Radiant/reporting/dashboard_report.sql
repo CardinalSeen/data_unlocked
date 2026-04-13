@@ -17,3 +17,7 @@ WHERE bonus_status = 'Eligible';
 SELECT *
 FROM reporting.v_dashboard_scorecard
 WHERE bonus_status = 'Not Eligible';
+
+SELECT employee_name, team_lead, productivity_weighted, quality_weighted, attendance_weighted,
+	compliance_weighted, final_score
+FROM reporting.v_dashboard_scorecard;
