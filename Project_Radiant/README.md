@@ -1,31 +1,171 @@
-# Project Radiant
+# Project_Radiant
 
-Project Radiant is a portfolio data engineering project built to demonstrate how raw operational data can be transformed into clean, structured, and reporting-ready datasets using SQL and a well-organized analytics workflow.
-This project highlights practical data engineering skills in data transformation, metric standardization, validation checks, and repository organization. It is designed to reflect how reporting pipelines are commonly structured in real business environments.
+Project_Radiant is a simple ETL scorecard pipeline built using PostgreSQL, with a cloud-based deployment version on AWS using Amazon S3 and Amazon RDS for PostgreSQL.
 
-## Overview
+The project simulates how raw operational datasets can be transformed into clean, reporting-ready outputs for scorecard analysis, validation, and performance monitoring.
 
-In many organizations, operational reporting can become difficult when data comes from multiple sources, uses inconsistent formats, and requires manual validation before it can be used for decision-making.
-Project Radiant simulates a professional reporting workflow where raw datasets are prepared, transformed, validated, and organized into analysis-ready outputs. The goal is to showcase not only SQL development skills, but also the discipline of building data projects in a clean, scalable, and portfolio-ready format.
+---
+
+## Project Overview
+
+This project follows a layered ETL approach:
+
+- **raw** = original source data
+- **stg** = cleaned and standardized data
+- **mart** = final analytical tables
+- **reporting** = dashboard-ready reporting views
+
+The pipeline processes datasets related to:
+
+- Employee master data
+- Attendance
+- Productivity
+- Quality
+- Adherence
+- Compliance
+
+The final output is a scorecard reporting view that can be used to assess employee performance and bonus eligibility.
+
+---
 
 ## Objectives
 
-* Transform raw data into structured reporting datasets
-* Apply SQL-based business logic for metric calculation
-* Organize project files using a clear engineering-friendly structure
-* Perform validation and reconciliation checks for data quality
-* Demonstrate a practical end-to-end reporting workflow for portfolio presentation
+- Build a structured ETL workflow in PostgreSQL
+- Apply data cleaning and validation rules
+- Create dimension and fact tables for reporting
+- Generate a final reporting view for business use
+- Demonstrate both a **local PostgreSQL implementation** and an **AWS RDS cloud implementation**
 
-## Scope of the Project
+---
 
-This project may include the following components:
-* Raw or source-level sample datasets
-* SQL transformation scripts
-* Reporting logic and scorecard calculations
-* Data validation and reconciliation checks
-* Supporting documentation
+## Tech Stack
 
-## Repository Structure
+### Local Version
+- PostgreSQL
+- pgAdmin
+- CSV files
+
+### AWS Version
+- Amazon S3
+- Amazon RDS for PostgreSQL
+- pgAdmin
+
+---
+
+## Architecture
+
+### Local PostgreSQL Version
+CSV Files → PostgreSQL Raw Tables → Staging Tables → Mart Tables → Reporting View
+
+### AWS Version
+CSV Files → Amazon S3 → Amazon RDS PostgreSQL → Staging Tables → Mart Tables → Reporting View
+
+---
+
+## ETL Layers
+
+### 1. Raw Layer
+The raw layer stores the original uploaded CSV data without applying business transformations.
+
+Tables:
+- `raw.employee_raw`
+- `raw.attendance_raw`
+- `raw.productivity_raw`
+- `raw.quality_raw`
+- `raw.adherence_raw`
+- `raw.compliance_raw`
+
+### 2. Staging Layer
+The staging layer cleans and standardizes the raw data.
+
+Examples:
+- trims spaces
+- replaces blank values
+- standardizes text values
+- converts date fields
+- prepares data for downstream reporting
+
+Tables:
+- `stg.employee`
+- `stg.attendance`
+- `stg.productivity`
+- `stg.quality`
+- `stg.adherence`
+- `stg.compliance`
+
+### 3. Mart Layer
+The mart layer contains reporting-friendly tables including dimensions and facts.
+
+Tables:
+- `mart.dim_employee`
+- `mart.fact_attendance`
+- `mart.fact_productivity`
+- `mart.fact_quality`
+- `mart.fact_adherence`
+- `mart.fact_compliance`
+
+### 4. Reporting Layer
+The reporting layer contains the final dashboard-ready reporting view.
+
+View:
+- `reporting.v_dashboard_scorecard`
+
+---
+
+## Data Validation Rules
+
+The project includes validation checks to improve data quality before reporting.
+
+Examples:
+- checking duplicate employee records
+- checking orphan records
+- validating attendance vs productivity
+- identifying exceptions and warning records
+- verifying final fact table populations
+
+A key business rule implemented in the project:
+- If an employee is absent due to approved leave, productivity should be zero
+- If an employee is late, productivity may still exist
+- If an employee is present, productivity is expected
+
+---
+
+## Final Output
+
+The final reporting output includes:
+
+- employee name
+- masked employee ID
+- team lead
+- total transactions
+- average quality score
+- adherence count
+- compliance violations
+- counted absences
+- weighted component scores
+- final score
+- bonus eligibility status
+- ranking
+
+---
+
+## Project Versions
+
+### Version 1: Local PostgreSQL
+This version was executed manually using local PostgreSQL and pgAdmin.
+
+### Version 2: AWS Cloud Version
+This version was implemented using:
+- **Amazon S3** as the raw file storage layer
+- **Amazon RDS for PostgreSQL** as the cloud ETL and reporting database
+- **pgAdmin** as the database administration and query tool
+
+This demonstrates how the same ETL logic can be migrated from a local environment to a cloud-based PostgreSQL environment.
+
+---
+
+## Folder Structure
+
 ```text
 Project_Radiant/
 ├── README.md
@@ -40,32 +180,38 @@ Project_Radiant/
 ├── performance/
 ├── sql/
 └── data/
+
 ```
 
+## How to Run
+1. Local PostgreSQL
+2. Create the schemas
+3. Create raw tables
+4. Import CSV files into raw tables
+5. Run staging scripts
+6. Run validation scripts
+7. Create mart tables
+8. Create reporting views
+9. Query the final reporting view
 
-## Tools and Technologies
-* PostgreSQL
-* SQL
-* Git
-* GitHub
+## AWS Version
+1. Upload source files to Amazon S3
+2. Create an Amazon RDS PostgreSQL instance
+3. Connect to RDS using pgAdmin
+4. Run the same SQL ETL scripts
+5. Load source data into raw tables
+6. Validate and generate the final reporting view
 
-## Data Engineering Skills Demonstrated
-* Data transformation
-* SQL scripting
-* Reporting logic development
-* Data quality validation
-* Repository and file structure organization
-* Documentation for reproducible analytics workflows
+## Key Learnings
+- Organizing data into layered schemas improves structure and maintainability
+- Data validation is critical before producing business reports
+- PostgreSQL can support a simple but effective ETL pipeline
+- AWS RDS can be used to migrate a local ETL workflow into a cloud environment
+- S3 adds a cloud-based raw data storage layer for a more complete data engineering architecture
 
-## Why This Project Matters
-This project was created to demonstrate how data engineering work supports reliable reporting and better decision-making. Rather than focusing only on query writing, Project Radiant emphasizes the broader workflow of preparing trustworthy datasets that can be used by analysts, operations teams, or business stakeholders.
+## Notes
+This project is designed as a portfolio demonstration of ETL fundamentals, data quality checks, and reporting design using PostgreSQL and AWS.
+The datasets used in this project are sample/project datasets created for demonstration purposes only.
 
-It also reflects an important real-world principle in data engineering: good reporting depends not only on calculations, but also on data quality, structure, consistency, and maintainability.
-
-## Disclaimer
-This project uses randomly generated synthetic data created for educational and portfolio purposes only. No real scorecard, employee, or company-confidential data is disclosed in this project.
-
-### Author
+Presented by:
 Marc Sandrino
-
-Portfolio Project under data_unlocked
