@@ -1,1 +1,4 @@
-{}
+{
+  "statusCode": 200,
+  "body": "{\"message\": \"Weather data loaded successfully for Manila\"}"
+}
