@@ -1,0 +1,51 @@
+"emp_id","comp_id","compliance_date","status","status_reason"
+67001515,21311,"2026-03-23","No Violation",NULL
+67001701,29302,"2026-03-25","IT Audit Report","Violation of SE02 - Tailgating - unauthorized physical access"
+67001441,29400,"2026-03-03","No Violation",NULL
+67001199,28744,"2026-03-16","HIPAA",NULL
+67001474,28037,"2026-03-18","Client Audit","Violation of CA02 - Incorrect benefit input due to data entry and validation gaps"
+67001211,27919,"2026-03-25","No Violation",NULL
+67001579,22163,"2026-03-23","No Violation",NULL
+67001630,25212,"2026-03-04","No Violation",NULL
+67001245,21596,"2026-03-12","HIPAA",NULL
+67001798,23080,"2026-03-17","No Violation",NULL
+67001144,22443,"2026-03-26","Client Audit","Violation of CA02 - Incorrect benefit input due to data entry and validation gaps"
+67001858,24334,"2026-03-30","No Violation",NULL
+67001404,29354,"2026-03-12","No Violation",NULL
+67001179,20870,"2026-03-10","HIPAA",NULL
+67001769,24156,"2026-03-09","No Violation",NULL
+67001994,26521,"2026-03-17","IT Audit Report","Violation of Policy 57 - Misuse of company systems/internet"
+67001936,23714,"2026-03-06","No Violation",NULL
+67001717,26591,"2026-03-13","HIPAA",NULL
+67001881,21226,"2026-03-10","No Violation",NULL
+67001842,24420,"2026-03-02","IT Audit Report","Violation of SE01 - Social engineering - clicked malicious link"
+67001538,20385,"2026-03-23","IT Audit Report","Violation of SE02 - Tailgating - unauthorized physical access"
+67001392,23279,"2026-03-02","HIPAA",NULL
+67001338,28196,"2026-03-04","IT Audit Report","Violation of Policy 57 - Misuse of company systems/internet"
+67001783,23414,"2026-03-17","Client Audit","Violation of CA02 - Incorrect benefit input due to data entry and validation gaps"
+67001979,23052,"2026-03-11","HIPAA",NULL
+67001297,25418,"2026-03-16","HIPAA",NULL
+67001865,22701,"2026-03-19","IT Audit Report","Violation of Policy 57 - Misuse of company systems/internet"
+67001186,21416,"2026-03-10","IT Audit Report","Violation of SE02 - Tailgating - unauthorized physical access"
+67001457,29040,"2026-03-27","IT Audit Report","Violation of SE01 - Social engineering - clicked malicious link"
+67001117,29751,"2026-03-12","No Violation",NULL
+67001491,27638,"2026-03-05","No Violation",NULL
+67001517,26031,"2026-03-06","No Violation",NULL
+67001451,22125,"2026-03-25","HIPAA",NULL
+67001215,28186,"2026-03-23","No Violation",NULL
+67001882,27617,"2026-03-18","IT Audit Report","Violation of Policy 57 - Misuse of company systems/internet"
+67001502,20240,"2026-03-12","No Violation",NULL
+67001240,20902,"2026-03-18","No Violation",NULL
+67001177,23980,"2026-03-30","IT Audit Report","Violation of Policy 57 - Misuse of company systems/internet"
+67001645,21824,"2026-03-05","IT Audit Report","Violation of SE02 - Tailgating - unauthorized physical access"
+67001781,23786,"2026-03-06","No Violation",NULL
+67001921,26619,"2026-03-27","HIPAA",NULL
+67002001,24490,"2026-03-05","No Violation",NULL
+67001148,28216,"2026-03-09","HIPAA",NULL
+67001855,25841,"2026-03-11","No Violation",NULL
+67001270,20692,"2026-03-24","IT Audit Report","Violation of Policy 57 - Misuse of company systems/internet"
+67001978,22692,"2026-03-12","IT Audit Report","Violation of Policy 57 - Misuse of company systems/internet"
+67001847,27432,"2026-03-12","No Violation",NULL
+67001795,21786,"2026-03-17","No Violation",NULL
+67001246,26985,"2026-03-19","Client Audit","Violation of CA02 - Incorrect benefit input due to data entry and validation gaps"
+67001920,29064,"2026-03-23","No Violation",NULL
